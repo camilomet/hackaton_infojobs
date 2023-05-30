@@ -17,6 +17,12 @@ main {
   padding: 15px;
 }
 
+header.ij-HeaderMobile {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 .content {
   background-color: white;
   display: flex;
