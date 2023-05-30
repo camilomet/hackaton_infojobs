@@ -132,8 +132,9 @@ fetch(req)
       spanContractType.textContent = "Contrato " + item.contractType.value;
 
       let spanExperienceMin = document.createElement("span");
-      spanExperienceMin.textContent =
-        item.experienceMin.value + " de experiencia";
+      let newExperience = item.experienceMin.value.replace("Al menos", "");
+      spanExperienceMin.textContent = newExperience + " de experiencia";
+      //item.experienceMin.value + " de experiencia";
 
       let spanTeleworking = document.createElement("span");
       let onlineProcess = document.createElement("span");
@@ -185,7 +186,9 @@ fetch(req)
       compatibleDiv.classList.add("compatibleDiv");
       let compatibleSpan = document.createElement("span");
       compatibleSpan.classList.add("compatibleSpan");
-      compatibleSpan.textContent = "55% compatible con la oferta";
+      var randomCompatible = Math.floor(Math.random() * 100) + 1;
+      compatibleSpan.textContent =
+        randomCompatible + "% compatible con la oferta";
       let linkCheckCompatible = document.createElement("a");
       linkCheckCompatible.classList.add("linkCheckCompatible");
 
